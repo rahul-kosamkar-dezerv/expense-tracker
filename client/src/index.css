@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1 {
+  margin-bottom: 20px;
+}
+form input,
+form button {
+  margin-right: 8px;
+  padding: 6px;
+}
+.expense-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
