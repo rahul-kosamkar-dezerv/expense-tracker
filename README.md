@@ -1,4 +1,4 @@
-# MERN Expense Tracker
+# Expense Tracker
 
 This is a minimal MERN-stack (MongoDB, Express, React, Node) scaffold for a personal expense tracker.
 Features:
