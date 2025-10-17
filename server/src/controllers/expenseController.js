@@ -6,7 +6,9 @@ export const getExpenses = async (req, res) => {
     res.json(expenses);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error" });
+    return res
+      .status(500)
+      .json({ message: "Internal server error", error: err.message });
   }
 };
 
@@ -23,7 +25,9 @@ export const addExpense = async (req, res) => {
     res.status(201).json(expense);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error" });
+    return res
+      .status(500)
+      .json({ message: "Internal server error", error: err.message });
   }
 };
 
@@ -37,7 +41,9 @@ export const updateExpense = async (req, res) => {
     res.json(updated);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error" });
+    return res
+      .status(500)
+      .json({ message: "Internal server error", error: err.message });
   }
 };
 
@@ -49,7 +55,9 @@ export const deleteExpense = async (req, res) => {
     res.json({ message: "Expense deleted" });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error" });
+    return res
+      .status(500)
+      .json({ message: "Internal server error", error: err.message });
   }
 };
 
@@ -103,6 +111,6 @@ export const getMonthlySummary = async (req, res) => {
     console.error("Error fetching monthly summary:", error);
     return res
       .status(500)
-      .json({ message: "Server error", error: error.message });
+      .json({ message: "Internal server error", error: error.message });
   }
 };
